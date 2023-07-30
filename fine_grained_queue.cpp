@@ -96,7 +96,9 @@ void FineGrainedQueue::Insert(int val, int pos)
     curNode->next_->nodeMutex_->unlock();
     newNode->next_->nodeMutex_->unlock();
   }
+  queueMutex_->lock();
   ++nodeCount_;
+  queueMutex_->unlock();
 }
 /*Восстанавливает исходный список узлов путем удаления вставок - узлы со
 значением >999. Т.к. вставки в начало списка нет по условиям задания, то
