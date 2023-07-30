@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <shared_mutex>
-//Проверка на утечки памяти.
-#include <vld.h>
+/*Проверка на утечки памяти.
+#include <vld.h>*/
 
 struct Node
 {
